@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e; /* Light grey background */
+    color: #ffffff;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar Styling */
+#navbar {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 15px;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+#navbar ul li {
+    margin: 0 20px;
+}
+
+#navbar ul li a {
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    background-color: #561d5e; /* Pop-off color */
+}
+
+/* Background Image */
+.background-image {
+    background-image: url('background.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.background-image h1 {
+    font-size: 3rem;
+    color: #c59b32; /* Gold */
+    margin-bottom: 10px;
+}
+
+.background-image p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #561d5e; /* Pop-off color */
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.cta-button:hover {
+    background-color: #c59b32; /* Gold */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Pulsing Button */
+.pulsing-button a {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Section Styling for Other Pages */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #c59b32;
+    font-size: 2rem;
+}
