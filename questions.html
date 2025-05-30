@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions - Dustine Kibagendi</title>
+    <link rel="stylesheet" href="questions.css">
+</head>
+<body>
+
+    <header>
+        <h1>Interactive Q&A</h1>
+        <p>Engage with Dustine’s knowledge! Click to uncover the answers in a dynamic way.</p>
+    </header>
+
+    <!-- Gamified Q&A -->
+    <section id="q1" class="question">
+        <h2>Why use embedded styles?</h2>
+        <button class="reveal-btn" onclick="revealAnswer('answer1')">Click to Reveal</button>
+        <p id="answer1" class="answer">Embedded styles are used when you want to style a specific page. They are written in the `<style>` tag within the `<head>` of the HTML document.</p>
+    </section>
+
+    <section id="q2" class="question">
+        <h2>Why use external styles?</h2>
+        <button class="reveal-btn" onclick="revealAnswer('answer2')">Click to Reveal</button>
+        <p id="answer2" class="answer">External styles are used to style multiple pages. They are placed in separate `.css` files, linked through a `<link>` tag in the HTML.</p>
+    </section>
+
+    <section id="q3" class="question">
+        <h2>How to configure an external stylesheet?</h2>
+        <button class="reveal-btn" onclick="revealAnswer('answer3')">Click to Reveal</button>
+        <p id="answer3" class="answer">To configure an external stylesheet, use this code: `<link rel="stylesheet" href="mystyles.css">` within the `<head>` of the HTML.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Dustine Kibagendi. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to reveal the answers
+        function revealAnswer(answerId) {
+            const answer = document.getElementById(answerId);
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>
