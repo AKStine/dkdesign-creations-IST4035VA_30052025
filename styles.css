@@ -1,10 +1,14 @@
 /* General Styles */
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Arial', sans-serif;
-    background-color: #1e1e1e; /* Light grey background */
-    color: #ffffff;
+    background-color: #141414; /* Dark background */
+    color: #fff;
 }
 
 h1, h2, p {
@@ -16,14 +20,17 @@ a {
     color: inherit;
 }
 
-/* Navbar Styling */
+ul {
+    list-style-type: none;
+}
+
+/* Navigation Bar */
 #navbar {
     position: sticky;
     top: 0;
     background-color: #333;
-    padding: 15px;
+    padding: 20px;
     z-index: 100;
-    transition: background-color 0.3s ease;
 }
 
 #navbar ul {
@@ -33,7 +40,7 @@ a {
 }
 
 #navbar ul li {
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 #navbar ul li a {
@@ -45,58 +52,63 @@ a {
 }
 
 #navbar ul li a:hover {
-    background-color: #561d5e; /* Pop-off color */
+    background-color: #c59b32; /* Gold */
 }
 
-/* Background Image */
-.background-image {
+/* Landing Section */
+.landing {
     background-image: url('background.jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
     height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.background-image h1 {
-    font-size: 3rem;
+.landing-content h1 {
+    font-size: 4rem;
     color: #c59b32; /* Gold */
     margin-bottom: 10px;
 }
 
-.background-image p {
+.landing-content p {
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
 .cta-button {
-    background-color: #561d5e; /* Pop-off color */
-    color: #ffffff;
+    background-color: #561d5e; /* Purple color */
+    color: #fff;
     padding: 15px 30px;
     font-size: 1.5rem;
     border-radius: 10px;
     transition: background-color 0.3s ease;
-    border: none;
+    text-transform: uppercase;
 }
 
 .cta-button:hover {
     background-color: #c59b32; /* Gold */
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-}
-
 /* Pulsing Button */
 .pulsing-button a {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #561d5e; /* Purple */
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    display: inline-block;
     animation: pulse 1.5s infinite;
+    text-align: center;
+}
+
+.pulsing-button a:hover {
+    background-color: #c59b32; /* Gold */
 }
 
 @keyframes pulse {
@@ -114,13 +126,21 @@ footer {
     }
 }
 
-/* Section Styling for Other Pages */
-section {
-    padding: 50px 20px;
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
+    padding: 20px;
 }
 
-h2 {
-    color: #c59b32;
-    font-size: 2rem;
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .landing-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+    }
 }
