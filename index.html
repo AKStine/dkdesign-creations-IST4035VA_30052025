@@ -4,43 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dustine Kibagendi - Brand Strategy Consultant</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="pulsing-button.css">
-    <link rel="stylesheet" href="https://csszengarden.com/095/">
+    
+    <!-- Inline styles for small tweaks -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #141414;
+            color: #fff;
+        }
+    </style>
 
+    <!-- Embedded styles for specific sections -->
+    <style>
+        header {
+            text-align: center;
+            background: #333;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #c59b32; /* Gold */
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #561d5e; /* Luxury purple */
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #c59b32; /* Gold */
+        }
+    </style>
+
+    <!-- External CSS for layout, responsiveness, and extra styling -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Pulsing Red Dot for Navigation -->
-    <div class="pulsing-button">
-        <a href="#" id="menuToggle" class="cta-button">+</a>
-    </div>
-
-    <!-- Navigation Menu (Hidden initially) -->
-    <div id="navMenu" class="nav-menu">
+    
+    <!-- Navigation Section -->
+    <nav id="nav-bar">
         <ul>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="services.html" class="nav-link">Services</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
-            <li><a href="projects.html" class="nav-link">Projects</a></li>
-            <li><a href="questions.html" class="nav-link">Questions</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-    </div>
+    </nav>
 
-    <!-- Landing Section with Full Background -->
-    <section class="landing">
-        <div class="landing-content">
-            <h1>Dustine Kibagendi</h1>
-            <p>Your Go-To Brand Strategy Consultant, Graphic & Web Designer</p>
-            <a href="projects.html" class="cta-button">Explore My Work</a>
+    <!-- Landing Section -->
+    <header>
+        <h1>Dustine Kibagendi</h1>
+        <p>Your Go-To Brand Strategy Consultant & Web Designer</p>
+        <a href="#contact" class="cta-button">Get in Touch</a>
+    </header>
+
+    <!-- Main Content -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a passionate Brand Strategy Consultant, Web Designer, and Creative Consultant. I specialize in creating impactful brand identities and websites.</p>
+    </section>
+
+    <section id="services">
+        <h2>My Services</h2>
+        <ul>
+            <li>Brand Strategy & Identity</li>
+            <li>Web Design & Development</li>
+            <li>Consulting & Personal Branding</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Explore my previous works and case studies that highlight the power of creativity and strategic branding.</p>
+        <div class="gallery">
+            <!-- Project 1 -->
+            <div class="project">
+                <h3>Brand Identity for X</h3>
+                <p>A case study on rebranding a tech startup.</p>
+            </div>
+            <!-- Project 2 -->
+            <div class="project">
+                <h3>Website Design for Y</h3>
+                <p>Redesigned a website for a global consulting firm.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Interested in working together? Feel free to reach out and book a consultation.</p>
+        <form action="#">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
     <footer>
         <p>&copy; 2025 Dustine Kibagendi. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
+
 </body>
 </html>
