@@ -9,10 +9,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #141414; /* Dark background */
     color: #fff;
-}
-
-h1, h2, p {
-    margin: 0;
+    font-size: 16px;
 }
 
 a {
@@ -20,44 +17,17 @@ a {
     color: inherit;
 }
 
+h1, h2, p {
+    margin: 0;
+}
+
 ul {
     list-style-type: none;
 }
 
-/* Navigation Bar */
-#navbar {
-    position: sticky;
-    top: 0;
-    background-color: #333;
-    padding: 20px;
-    z-index: 100;
-}
-
-#navbar ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-}
-
-#navbar ul li {
-    margin: 0 15px;
-}
-
-#navbar ul li a {
-    color: #fff;
-    font-size: 1.1rem;
-    padding: 10px 20px;
-    display: block;
-    transition: background-color 0.3s ease;
-}
-
-#navbar ul li a:hover {
-    background-color: #c59b32; /* Gold */
-}
-
-/* Landing Section */
+/* Full Page Background */
 .landing {
-    background-image: url('background.jpg'); /* Replace with your image */
+    background-image: url('https://source.unsplash.com/1600x900/?luxury'); /* Placeholder image */
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -79,8 +49,8 @@ ul {
 }
 
 .cta-button {
-    background-color: #561d5e; /* Purple color */
-    color: #fff;
+    background-color: #561d5e; /* Luxury purple */
+    color: #ffffff;
     padding: 15px 30px;
     font-size: 1.5rem;
     border-radius: 10px;
@@ -92,38 +62,61 @@ ul {
     background-color: #c59b32; /* Gold */
 }
 
-/* Pulsing Button */
+/* Pulsing Red Dot */
 .pulsing-button a {
     position: absolute;
     top: 20px;
     left: 20px;
-    background-color: #561d5e; /* Purple */
+    background-color: #ff0000; /* Red */
     color: white;
     padding: 12px 25px;
     font-size: 1.3rem;
-    border-radius: 50px;
+    border-radius: 50%;
     display: inline-block;
-    animation: pulse 1.5s infinite;
     text-align: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .pulsing-button a:hover {
     background-color: #c59b32; /* Gold */
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.7;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+/* Navigation Menu */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-top: 50px;
+}
+
+.nav-menu ul li {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    background-color: #c59b32; /* Gold */
 }
 
 /* Footer */
@@ -134,7 +127,12 @@ footer {
     padding: 20px;
 }
 
-/* Responsive Design */
+/* Transitioning the menu */
+.nav-menu.active {
+    transform: translateX(0);
+}
+
+/* Mobile and tablet responsiveness */
 @media screen and (max-width: 768px) {
     .landing-content h1 {
         font-size: 2.5rem;
