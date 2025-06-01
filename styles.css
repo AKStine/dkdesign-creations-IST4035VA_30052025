@@ -1,4 +1,4 @@
-/* General Styles */
+/* Resetting styles */
 * {
     margin: 0;
     padding: 0;
@@ -9,136 +9,139 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #141414; /* Dark background */
     color: #fff;
-    font-size: 16px;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+/* Navigation Styling */
+#nav-bar {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 15px;
+    z-index: 100;
 }
 
-h1, h2, p {
-    margin: 0;
-}
-
-ul {
+#nav-bar ul {
+    display: flex;
+    justify-content: center;
     list-style-type: none;
 }
 
-/* Full Page Background */
-.landing {
-    background-image: url('https://source.unsplash.com/1600x900/?luxury'); /* Placeholder image */
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+#nav-bar ul li {
+    margin: 0 15px;
 }
 
-.landing-content h1 {
+#nav-bar ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+#nav-bar ul li a:hover {
+    background-color: #c59b32; /* Gold */
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    background-color: #333;
+    padding: 60px 20px;
+}
+
+header h1 {
     font-size: 4rem;
     color: #c59b32; /* Gold */
     margin-bottom: 10px;
 }
 
-.landing-content p {
+header p {
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
 .cta-button {
     background-color: #561d5e; /* Luxury purple */
-    color: #ffffff;
+    color: #fff;
     padding: 15px 30px;
     font-size: 1.5rem;
     border-radius: 10px;
-    transition: background-color 0.3s ease;
     text-transform: uppercase;
+    transition: background-color 0.3s;
 }
 
 .cta-button:hover {
     background-color: #c59b32; /* Gold */
 }
 
-/* Pulsing Red Dot */
-.pulsing-button a {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: #ff0000; /* Red */
-    color: white;
-    padding: 12px 25px;
-    font-size: 1.3rem;
-    border-radius: 50%;
-    display: inline-block;
+/* About Section */
+#about {
+    padding: 50px 20px;
     text-align: center;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
 }
 
-.pulsing-button a:hover {
-    background-color: #c59b32; /* Gold */
+#about h2 {
+    font-size: 2rem;
+    color: #c59b32;
 }
 
-/* Navigation Menu */
-.nav-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100vh;
+/* Projects Section */
+#projects {
+    background-color: #222;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.project {
     background-color: #333;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
 }
 
-.nav-menu ul {
+.project h3 {
+    color: #c59b32; /* Gold */
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#contact form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    padding-top: 50px;
+    align-items: center;
 }
 
-.nav-menu ul li {
-    margin: 20px 0;
-    text-align: center;
-}
-
-.nav-menu ul li a {
-    color: #fff;
-    font-size: 1.5rem;
+#contact form input,
+#contact form textarea {
+    width: 80%;
     padding: 10px;
-    display: block;
-    transition: background-color 0.3s ease;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #c59b32;
 }
 
-.nav-menu ul li a:hover {
+#contact form button {
+    padding: 12px 25px;
+    background-color: #561d5e; /* Purple */
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#contact form button:hover {
     background-color: #c59b32; /* Gold */
 }
 
-/* Footer */
+/* Footer Section */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 20px;
-}
-
-/* Transitioning the menu */
-.nav-menu.active {
-    transform: translateX(0);
-}
-
-/* Mobile and tablet responsiveness */
-@media screen and (max-width: 768px) {
-    .landing-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .cta-button {
-        font-size: 1.2rem;
-    }
 }
