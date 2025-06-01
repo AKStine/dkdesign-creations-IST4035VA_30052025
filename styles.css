@@ -13,7 +13,7 @@ body {
 
 /* Fullscreen Landing Section */
 .landing {
-    background-image: url('https://source.unsplash.com/1600x900/?luxury'); /* Placeholder image */
+    background-image: url('https://source.unsplash.com/1600x900/?luxury'); /* Background Image */
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -121,7 +121,101 @@ body {
     }
 }
 
-/* Footer Section */
+/* Section Styles */
+.section-content {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #2E3B4E; /* Deep Slate Blue */
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: transform 0.3s;
+}
+
+/* Projects Section Styling */
+#projects {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #FF6F61; /* Vibrant Coral */
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #A8D908; /* Lime Green on hover */
+}
+
 footer {
     background-color: #333;
     color: #fff;
