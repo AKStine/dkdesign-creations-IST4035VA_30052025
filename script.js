@@ -1,9 +1,4 @@
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+// Toggle navigation menu
+document.getElementById("menuToggle").addEventListener("click", function () {
+    document.getElementById("navMenu").classList.toggle("active");
 });
