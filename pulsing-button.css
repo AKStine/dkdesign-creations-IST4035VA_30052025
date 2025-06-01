@@ -1,19 +1,6 @@
-/* Pulsing button animation */
+/* Pulsing animation for the button */
 .pulsing-button a {
     animation: pulse 1.5s infinite;
-    background-color: #561d5e;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.5rem;
-    border-radius: 50px;
-    display: inline-block;
-    text-align: center;
-    margin: 20px 0;
-    transition: background-color 0.3s ease;
-}
-
-.pulsing-button a:hover {
-    background-color: #c59b32; /* Gold */
 }
 
 @keyframes pulse {
