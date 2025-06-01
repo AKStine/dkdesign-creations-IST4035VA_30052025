@@ -1,4 +1,4 @@
-/* Resetting styles */
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,61 +7,35 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #141414; /* Dark background */
-    color: #fff;
+    background-color: #F1F1F1; /* Soft Gray Background */
+    color: #333333; /* Charcoal Gray Text */
 }
 
-/* Navigation Styling */
-#nav-bar {
-    position: sticky;
-    top: 0;
-    background-color: #333;
-    padding: 15px;
-    z-index: 100;
-}
-
-#nav-bar ul {
+/* Fullscreen Landing Section */
+.landing {
+    background-image: url('https://source.unsplash.com/1600x900/?luxury'); /* Placeholder image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    list-style-type: none;
-}
-
-#nav-bar ul li {
-    margin: 0 15px;
-}
-
-#nav-bar ul li a {
-    color: #fff;
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    display: block;
-    transition: background-color 0.3s;
-}
-
-#nav-bar ul li a:hover {
-    background-color: #c59b32; /* Gold */
-}
-
-/* Header Section */
-header {
+    align-items: center;
     text-align: center;
-    background-color: #333;
-    padding: 60px 20px;
 }
 
-header h1 {
+.landing-content h1 {
     font-size: 4rem;
-    color: #c59b32; /* Gold */
+    color: #2E3B4E; /* Deep Slate Blue */
     margin-bottom: 10px;
 }
 
-header p {
+.landing-content p {
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
 .cta-button {
-    background-color: #561d5e; /* Luxury purple */
+    background-color: #FF6F61; /* Vibrant Coral */
     color: #fff;
     padding: 15px 30px;
     font-size: 1.5rem;
@@ -71,71 +45,80 @@ header p {
 }
 
 .cta-button:hover {
-    background-color: #c59b32; /* Gold */
+    background-color: #A8D908; /* Lime Green on hover */
 }
 
-/* About Section */
-#about {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#about h2 {
-    font-size: 2rem;
-    color: #c59b32;
-}
-
-/* Projects Section */
-#projects {
-    background-color: #222;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.project {
+/* Navigation Menu (Hidden Initially) */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
     background-color: #333;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 8px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
 }
 
-.project h3 {
-    color: #c59b32; /* Gold */
-}
-
-/* Contact Section */
-#contact {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#contact form {
+.nav-menu ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-top: 50px;
 }
 
-#contact form input,
-#contact form textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-    border: 1px solid #c59b32;
+.nav-menu ul li {
+    margin: 20px 0;
+    text-align: center;
 }
 
-#contact form button {
-    padding: 12px 25px;
-    background-color: #561d5e; /* Purple */
+.nav-menu ul li a {
     color: #fff;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s;
 }
 
-#contact form button:hover {
-    background-color: #c59b32; /* Gold */
+.nav-menu ul li a:hover {
+    background-color: #A8D908; /* Lime Green */
+}
+
+/* Pulsing Red Dot (Interactive) */
+.pulsing-button a {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #FF6F61; /* Vibrant Coral */
+    color: white;
+    padding: 10px;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 1.5s infinite;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pulsing-button a:hover {
+    background-color: #A8D908; /* Lime Green */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* Footer Section */
