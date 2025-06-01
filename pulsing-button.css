@@ -1,10 +1,11 @@
+/* Pulsing button animation */
 .pulsing-button a {
     animation: pulse 1.5s infinite;
     background-color: #561d5e;
-    color: #fff;
+    color: white;
     padding: 15px 30px;
     font-size: 1.5rem;
-    border-radius: 10px;
+    border-radius: 50px;
     display: inline-block;
     text-align: center;
     margin: 20px 0;
